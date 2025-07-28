@@ -4,6 +4,7 @@ const Usuario = require("../models/usuario");
 require("dotenv").config();
 
 const segredoJWT = process.env.JWT_SECRET;
+console.log("SEGREDO JWT:", segredoJWT);
 
 // Registro de novo usuario
 exports.register = async(req,res)=>{

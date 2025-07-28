@@ -4,10 +4,14 @@ const cors = require("cors");
 const tarefaRoutes = require("./routes/tarefaRoutes");
 const sequelize = require("./database/db");
 const Tarefa = require("./models/Tarefa");
+const authRoutes = require("./routes/authRoutes");
 
 app.use(cors());
 app.use(express.json());
 app.use(tarefaRoutes);
+
+app.use("/auth", authRoutes);
+app.use("/tarefas", tarefaRoutes);
 
 sequelize.sync().then(()=>{
     app.listen(3000,()=>{
