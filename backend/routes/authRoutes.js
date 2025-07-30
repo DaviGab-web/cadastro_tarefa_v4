@@ -4,7 +4,7 @@ const authController = require('../controllers/authController');
 
 //Rota registrar novo usuario
 
-router.post("/resgister",authController.register);
+router.post("/register", authController.register);
 
 //rota para login de usuario
 
